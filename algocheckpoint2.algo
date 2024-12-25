@@ -1,0 +1,14 @@
+PROCEDURE nsertion_sort(t : ARRAY_OF INTEGER;n:INTEGER)
+VAR
+    i,j,v:INTEGER;
+BEGIN
+    FOR i FROM 1 TO n-1 DO
+        v:=t[i];
+        j:=i-1;
+        WHILE (t[j] > v and j >= 0) DO
+            t[j] := t[j+1];
+            j:=j-1;
+        END_WHILE
+        t[j+1] := v
+    END_FOR
+END
